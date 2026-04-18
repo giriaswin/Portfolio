@@ -1,0 +1,24 @@
+{
+  "entities": {
+    "SiteStats": {
+      "title": "SiteStats",
+      "description": "Stores the global visitor count for the portfolio site",
+      "type": "object",
+      "properties": {
+        "views": {
+          "type": "number",
+          "description": "Total number of views"
+        }
+      },
+      "required": ["views"]
+    }
+  },
+  "firestore": {
+    "/stats/{docId}": {
+      "schema": {
+        "$ref": "#/entities/SiteStats"
+      },
+      "description": "A collection containing a single document 'global' that holds the view count."
+    }
+  }
+}

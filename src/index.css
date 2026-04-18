@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg-base: #0B0B0F;
+  --color-surface: #111217;
+  --color-surface-light: #16181D;
+  --color-card: #1A1D23;
+  --color-primary: #7C5CFF;
+  --color-secondary: #FF7A18;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-accent: "Caveat", cursive;
+
+  --animate-shimmer: shimmer 2s infinite linear;
+  --animate-glow-pulse: glow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 0px rgba(124,92,255,0); border-color: rgba(255,255,255,0.1); }
+    50% { box-shadow: 0 0 30px rgba(124,92,255,0.4); border-color: rgba(124,92,255,0.5); }
+  }
+}
+
+@layer base {
+  html {
+    /* Removed scroll-behavior: smooth to let Lenis handle it */
+  }
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  body {
+    @apply bg-bg-base text-gray-200 font-body antialiased selection:bg-primary/30 selection:text-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    @apply overflow-x-hidden;
+    cursor: default;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight text-white;
+    text-rendering: optimizeLegibility;
+  }
+  p {
+    @apply max-w-[70ch];
+  }
+  a, button {
+    cursor: default; /* User requested default cursor everywhere */
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface/80 backdrop-blur-md border border-white/10;
+    will-change: transform;
+    transform: translate3d(0,0,0);
+  }
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-white/10 hover:border-primary/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(124,92,255,0.15)] rounded-2xl shadow-lg transition-all duration-[240ms] ease-[cubic-bezier(0.22,1,0.36,1)];
+    will-change: transform, box-shadow, border-color;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .btn-scale {
+    @apply active:scale-95 hover:scale-105 hover:shadow-[0_8px_20px_rgba(124,92,255,0.2)] transition-all duration-[240ms] ease-[cubic-bezier(0.22,1,0.36,1)];
+    will-change: transform, box-shadow;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-[240ms] after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100;
+  }
+
+  /* Elevation System */
+  .elevation-1 {
+    @apply shadow-none;
+  }
+  .elevation-2 {
+    @apply shadow-[0_4px_20px_rgba(0,0,0,0.2)];
+  }
+  .elevation-3 {
+    @apply shadow-[0_8px_30px_rgba(124,92,255,0.15)] -translate-y-1 transition-all duration-300;
+  }
+  .perspective-book {
+    perspective: 3000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .origin-left {
+    transform-origin: left center;
+  }
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}
+
+/* Mobile hover fix */
+@media (hover: none) {
+  .hover-disable:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 0 !important;
+  }
+}

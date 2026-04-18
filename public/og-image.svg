@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Mesh Gradient -->
+    <radialGradient id="meshCore" cx="30%" cy="40%" r="80%" fx="20%" fy="30%">
+      <stop offset="0%" stop-color="#EBF1FA"/>
+      <stop offset="60%" stop-color="#DCE4FC"/>
+      <stop offset="100%" stop-color="#C5D3FF"/>
+    </radialGradient>
+    
+    <!-- Vibrant Shape Gradients -->
+    <linearGradient id="primaryShape" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C5CFF" />
+      <stop offset="100%" stop-color="#5522FF" />
+    </linearGradient>
+
+    <linearGradient id="secondaryShape" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF7A18" />
+      <stop offset="100%" stop-color="#FF2442" />
+    </linearGradient>
+
+    <linearGradient id="tertiaryShape" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="100%" stop-color="#14B8A6" />
+    </linearGradient>
+
+    <linearGradient id="yellowShape" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#EAB308" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <!-- Glass Morphism Card Gradient -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.4)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.1)" />
+    </linearGradient>
+    
+    <linearGradient id="glassBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255, 255, 255, 0.8)" />
+      <stop offset="100%" stop-color="rgba(255, 255, 255, 0.2)" />
+    </linearGradient>
+
+    <!-- Filters/Shadows -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#4B5E9C" flood-opacity="0.15" />
+    </filter>
+
+    <filter id="heavyShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="15" dy="25" stdDeviation="25" flood-color="#2D3A6A" flood-opacity="0.3" />
+    </filter>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="60" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="blurFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#B1C2E6" opacity="0.6"/>
+    </pattern>
+
+    <!-- Noise Pattern -->
+    <pattern id="noise" width="100" height="100" patternUnits="userSpaceOnUse">
+      <image href="data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E" width="100" height="100" preserveAspectRatio="none" opacity="0.05"/>
+    </pattern>
+  </defs>
+
+  <!-- 1. Background -->
+  <rect width="1200" height="630" fill="url(#meshCore)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  
+  <!-- Subtle ambient glows -->
+  <circle cx="200" cy="150" r="300" fill="#7C5CFF" opacity="0.1" filter="url(#glow)" />
+  <circle cx="1000" cy="500" r="400" fill="#FF7A18" opacity="0.08" filter="url(#glow)" />
+  
+  <!-- 2. Dynamic 3D Floating Shapes (Background Layer) -->
+  
+  <!-- Large Orange/Red abstract wave/sheet -->
+  <path d="M 850 150 C 950 50, 1150 100, 1100 300 C 1050 500, 900 450, 800 550 C 700 650, 600 500, 650 350 C 700 200, 750 250, 850 150 Z" 
+        fill="url(#secondaryShape)" opacity="0.9" filter="url(#heavyShadow)" transform="rotate(15 900 350)" />
+  
+  <!-- Green cylinder / primitive -->
+  <g transform="translate(680, 120) rotate(-20) scale(1.4)" filter="url(#heavyShadow)">
+    <path d="M 0 0 L 80 0 L 60 40 L -20 40 Z" fill="url(#tertiaryShape)" />
+    <path d="M -20 40 L 60 40 L 40 80 L -40 80 Z" fill="#0D9488" />
+  </g>
+
+  <!-- Yellow floating sphere -->
+  <circle cx="150" cy="450" r="60" fill="url(#yellowShape)" filter="url(#heavyShadow)" />
+
+  <!-- Purple/Blue geometric pyramid -->
+  <g transform="translate(350, 480) rotate(25) scale(1.5)" filter="url(#heavyShadow)">
+    <path d="M 0 -40 L 40 20 L -40 20 Z" fill="url(#primaryShape)" />
+    <path d="M -40 20 L 40 20 L 0 50 Z" fill="#4B00D1" />
+  </g>
+
+  <!-- 3. Central Glassmorphic Card (The "Perfectionism" core) -->
+  <g transform="translate(250, 130)" filter="url(#softShadow)">
+    <!-- Blur backdrop (using an SVG trick: dark outline blurred out, but actual blur requires HTML/CSS backdrop-filter for true fidelity. We'll use a semi-transparent gradient + fake blur here) -->
+    <rect x="-10" y="-10" width="720" height="370" rx="36" fill="rgba(255, 255, 255, 0.4)" filter="url(#blurFilter)" />
+    
+    <!-- Actual Glass Card -->
+    <rect x="0" y="0" width="700" height="350" rx="32" fill="url(#glassGradient)" stroke="url(#glassBorder)" stroke-width="2" />
+    <rect x="0" y="0" width="700" height="350" rx="32" fill="url(#noise)" />
+    
+    <!-- Inside Glass Card UI Elements -->
+    
+    <!-- Title: Portfolio -->
+    <text x="60" y="100" font-family="'Inter', 'Space Grotesk', system-ui, sans-serif" font-weight="900" font-size="72" fill="#1A1535" letter-spacing="-2">
+      Portfolio
+    </text>
+
+    <!-- Subtitle: Full Stack & Data -->
+    <text x="65" y="145" font-family="'Inter', system-ui, sans-serif" font-weight="600" font-size="24" fill="#7C5CFF" letter-spacing="1">
+      DATA &amp; WEB DEVELOPER
+    </text>
+
+    <!-- Name/Brand Tag -->
+    <g transform="translate(60, 240)">
+      <rect x="0" y="0" width="280" height="60" rx="30" fill="#0B0B0F" />
+      <text x="140" y="38" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="28" fill="#FFFFFF" text-anchor="middle">
+        GIRI ASWIN
+      </text>
+    </g>
+
+    <!-- Right-side stylized "code" or "data" lines -->
+    <g transform="translate(420, 80)">
+      <rect x="0" y="0" width="200" height="12" rx="6" fill="#7C5CFF" opacity="0.8" />
+      <rect x="0" y="30" width="160" height="12" rx="6" fill="#1A1535" opacity="0.5" />
+      <rect x="0" y="60" width="240" height="12" rx="6" fill="#1A1535" opacity="0.5" />
+      <rect x="0" y="90" width="120" height="12" rx="6" fill="#1A1535" opacity="0.5" />
+      
+      <!-- Mini abstract charts -->
+      <path d="M 0 160 L 40 130 L 80 150 L 120 110 L 160 140 L 220 90" fill="none" stroke="#FF7A18" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="220" cy="90" r="8" fill="#FF7A18" />
+    </g>
+  </g>
+
+  <!-- 4. Dynamic 3D Floating Shapes (Foreground Layer) -->
+  
+  <!-- Graphic tablet pen overlapping the card -->
+  <g transform="translate(750, 420) rotate(-15) scale(1.2)" filter="url(#heavyShadow)">
+    <path d="M 0 0 L 160 0 C 170 0, 180 5, 200 10 L 0 20 Z" fill="#1A1535" />
+    <path d="M 0 0 L 160 0 C 165 -10, 170 -10, 190 2 L 0 20 Z" fill="#2D215E" />
+    <polygon points="160,0 200,10 160,20" fill="#0B0B0F" />
+    <polygon points="200,10 220,12 200,14" fill="#666" />
+    
+    <!-- Pen buttons -->
+    <rect x="60" y="-2" width="40" height="4" rx="2" fill="#7C5CFF" />
+  </g>
+
+  <!-- Keycap overlapping bottom left -->
+  <g transform="translate(200, 480) rotate(10) scale(1.6)" filter="url(#heavyShadow)">
+    <!-- Base block -->
+    <path d="M 10 20 L 70 20 L 80 40 L 0 40 Z" fill="#E2E8F0" />
+    <path d="M 70 20 L 80 40 L 80 60 L 70 40 Z" fill="#CBD5E1" />
+    <!-- Top Cap -->
+    <path d="M 15 5 L 65 5 L 70 20 L 10 20 Z" fill="#F8FAFC" />
+    <rect x="15" y="5" width="50" height="15" fill="#FFFFFF" opacity="0.5" />
+    <!-- Red Cherry Switch Stem peaking out -->
+    <rect x="35" y="0" width="10" height="5" fill="#EF4444" />
+    <rect x="40" y="-5" width="5" height="10" fill="#EF4444" />
+  </g>
+
+  <!-- `< / >` Floating Element -->
+  <g transform="translate(900, 100) rotate(15)" filter="url(#heavyShadow)">
+    <text x="0" y="0" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="80" font-weight="900" fill="#FFFFFF" stroke="#0B0B0F" stroke-width="4">
+      &lt;/&gt;
+    </text>
+  </g>
+
+</svg>

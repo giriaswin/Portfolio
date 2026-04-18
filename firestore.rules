@@ -1,0 +1,45 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // SECURITY CONSTANTS
+    // Global lock - blocks everything not explicitly allowed below
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Rate Limiting / Abuse Prevention logic for the Views collection
+    // This strictly locks the collection down to prevent a distributed denial-of-wallet
+    // or an attacker dumping arbitrary data into the database.
+    match /views/portfolio {
+       // Only allow fetching the view count. It requires no auth. 
+       allow get: if true;
+
+       // Prevent anyone from doing a "list all docs" query 
+       allow list: if false;
+
+       allow create: if
+          // Must only contain a "count" field
+          request.resource.data.keys().hasAll(['count']) &&
+          request.resource.data.keys().size() == 1 &&
+          // Must be an integer
+          request.resource.data.count is int &&
+          // Must correctly initialize at exactly 1
+          request.resource.data.count == 1;
+
+       allow update: if
+          // The difference (diff) between what they sent and what exists MUST only affect "count"
+          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['count']) &&
+          // The new shape must still only have count
+          request.resource.data.keys().hasAll(['count']) &&
+          request.resource.data.keys().size() == 1 &&
+          // Must be an integer
+          request.resource.data.count is int &&
+          // MANDATORY LIMIT: Must increment by EXACTLY 1. No jumping to 99999 in one request.
+          request.resource.data.count == resource.data.count + 1;
+
+       // NEVER allow user to delete the view count tracker
+       allow delete: if false;
+    }
+  }
+}
