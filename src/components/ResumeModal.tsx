@@ -13,12 +13,21 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
   // Reset states when modal closes or opens to prevent jank
   useEffect(() => {
-    if (!isOpen) {
+    if (isOpen) {
+      // STRICT SCROLL LOCK: Prevent global Lenis from hijacking PDF scroll events
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
       setTimeout(() => {
         setIsAnimationComplete(false);
         setIsLoading(true);
       }, 300); // Wait for exit animation to finish
     }
+
+    // Cleanup when component force unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   return (
@@ -40,7 +49,8 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             onAnimationComplete={() => setIsAnimationComplete(true)}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-5xl h-[85vh] bg-surface/95 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden will-change-transform transform-gpu"
+            data-lenis-prevent="true"
+            className="relative w-full max-w-5xl h-[85vh] bg-surface/95 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden will-change-transform transform-gpu overscroll-contain"
           >
             {/* Inner ambient glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -97,6 +107,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   data="/GiriAswin.pdf#toolbar=0&navpanes=0&scrollbar=0"
                   type="application/pdf"
                   className="w-full h-full"
+                  data-lenis-prevent="true"
                   onLoad={() => setIsLoading(false)}
                 >
                   {/* Fallback for browsers that don't support inline PDFs (e.g. some mobile browsers) */}
