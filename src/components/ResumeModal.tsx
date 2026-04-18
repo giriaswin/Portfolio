@@ -78,7 +78,8 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               
               <div className="flex items-center gap-3">
                 <a
-                  href="https://drive.google.com/uc?export=download&id=1urAlDi1oeSytbHpmha47wxzioE0MviiE"
+                  href="/GiriAswin.pdf"
+                  download="GiriAswin.pdf"
                   className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-primary border border-white/10 hover:border-primary/50 text-white rounded-full text-sm font-medium transition-all duration-300 btn-scale group shadow-lg"
                 >
                   <Download size={16} className="group-hover:-translate-y-0.5 transition-transform" />
@@ -105,24 +106,43 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               )}
               
               {/* 
-                Zero-Latency Render Guard: We only mount the iframe AFTER the 
+                Zero-Latency Render Guard: We only mount the heavy PDF iframe AFTER the 
                 bezier-curve entrance animation has completely settled.
+                User Instruction: Place your file named EXACTLY 'GiriAswin.pdf' inside the /public folder before deploying.
               */}
               {isAnimationComplete && (
-                <iframe
-                  src="https://drive.google.com/file/d/1urAlDi1oeSytbHpmha47wxzioE0MviiE/preview"
-                  className="w-full h-full border-0"
+                <object
+                  data="/GiriAswin.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                  type="application/pdf"
+                  className="w-full h-full"
                   data-lenis-prevent="true"
-                  allow="autoplay"
                   onLoad={() => setIsLoading(false)}
-                ></iframe>
+                >
+                  {/* Fallback for browsers that don't support inline PDFs (e.g. some mobile browsers) */}
+                  <div className="flex flex-col items-center justify-center h-full p-8 text-center bg-surface w-full">
+                    <FileText size={48} className="text-gray-600 mb-4" />
+                    <h3 className="text-xl font-heading text-white mb-2">PDF Viewer Not Available</h3>
+                    <p className="text-gray-400 mb-6 max-w-md">
+                      Your browser doesn't support built-in PDF viewing. You can securely download the file to read it.
+                    </p>
+                    <a
+                      href="/GiriAswin.pdf"
+                      download="GiriAswin.pdf"
+                      className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all btn-scale shadow-lg shadow-primary/20"
+                    >
+                      <Download size={18} />
+                      Download Resume
+                    </a>
+                  </div>
+                </object>
               )}
             </div>
 
             {/* Mobile Download CTA (fixed to bottom for small screens) */}
             <div className="sm:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
               <a
-                href="https://drive.google.com/uc?export=download&id=1urAlDi1oeSytbHpmha47wxzioE0MviiE"
+                href="/GiriAswin.pdf"
+                download="GiriAswin.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full text-sm font-medium btn-scale shadow-[0_10px_40px_rgba(124,92,255,0.4)]"
               >
                 <Download size={18} />
