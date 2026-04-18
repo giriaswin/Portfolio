@@ -168,7 +168,7 @@ export default function Home() {
               <div className="relative w-[12rem] h-[12.5rem] sm:w-[13rem] sm:h-[13.5rem] bg-[#fcfcfc] p-2.5 pb-8 sm:pb-9 rounded-md shadow-[0_8px_30px_rgba(0,0,0,0.25)] -rotate-2 group-hover:rotate-1 group-hover:scale-[1.02] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] transform-gpu cursor-default border border-black/5">
                 <div className="w-full h-full bg-gray-200 overflow-hidden relative shadow-inner rounded-sm">
                   <img 
-                    src="H1.png" 
+                    src="/H1.png" 
                     alt="Giri Aswin" 
                     className="w-full h-full object-cover grayscale mix-blend-multiply group-hover:grayscale-0 group-hover:mix-blend-normal transition-all duration-700 ease-out"
                     referrerPolicy="no-referrer"
