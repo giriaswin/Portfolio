@@ -16,14 +16,8 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
     if (isOpen) {
       // STRICT SCROLL LOCK: Prevent global Lenis from hijacking PDF scroll events
       document.body.style.overflow = 'hidden';
-      // Completely pause Lenis RAF loops
-      // @ts-ignore
-      if (window.lenis) window.lenis.stop();
     } else {
       document.body.style.overflow = 'unset';
-      // @ts-ignore
-      if (window.lenis) window.lenis.start();
-
       setTimeout(() => {
         setIsAnimationComplete(false);
         setIsLoading(true);
@@ -33,8 +27,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
     // Cleanup when component force unmounts
     return () => {
       document.body.style.overflow = 'unset';
-      // @ts-ignore
-      if (window.lenis) window.lenis.start();
     };
   }, [isOpen]);
 
@@ -47,7 +39,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: 'linear' }}
           onClick={onClose}
-          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4 sm:p-6 md:p-12"
+          className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 md:p-12"
         >
           {/* Main Modal Container */}
           <motion.div
@@ -58,7 +50,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             onAnimationComplete={() => setIsAnimationComplete(true)}
             onClick={(e) => e.stopPropagation()}
             data-lenis-prevent="true"
-            className="relative w-full max-w-5xl h-[85vh] bg-[#1a1c20] border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden overscroll-contain"
+            className="relative w-full max-w-5xl h-[85vh] bg-surface/95 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden will-change-transform transform-gpu overscroll-contain"
           >
             {/* Inner ambient glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
