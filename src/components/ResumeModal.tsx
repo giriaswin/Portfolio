@@ -16,8 +16,14 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
     if (isOpen) {
       // STRICT SCROLL LOCK: Prevent global Lenis from hijacking PDF scroll events
       document.body.style.overflow = 'hidden';
+      // Completely pause Lenis RAF loops
+      // @ts-ignore
+      if (window.lenis) window.lenis.stop();
     } else {
       document.body.style.overflow = 'unset';
+      // @ts-ignore
+      if (window.lenis) window.lenis.start();
+
       setTimeout(() => {
         setIsAnimationComplete(false);
         setIsLoading(true);
@@ -27,6 +33,8 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
     // Cleanup when component force unmounts
     return () => {
       document.body.style.overflow = 'unset';
+      // @ts-ignore
+      if (window.lenis) window.lenis.start();
     };
   }, [isOpen]);
 
@@ -39,7 +47,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: 'linear' }}
           onClick={onClose}
-          className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6 md:p-12"
+          className="fixed inset-0 z-[60] bg-black/95 flex items-center justify-center p-4 sm:p-6 md:p-12"
         >
           {/* Main Modal Container */}
           <motion.div
@@ -50,7 +58,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
             onAnimationComplete={() => setIsAnimationComplete(true)}
             onClick={(e) => e.stopPropagation()}
             data-lenis-prevent="true"
-            className="relative w-full max-w-5xl h-[85vh] bg-surface/95 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden will-change-transform transform-gpu overscroll-contain"
+            className="relative w-full max-w-5xl h-[85vh] bg-[#1a1c20] border border-white/10 rounded-3xl shadow-[0_0_60px_rgba(0,0,0,0.6)] flex flex-col overflow-hidden overscroll-contain"
           >
             {/* Inner ambient glow */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -70,8 +78,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               
               <div className="flex items-center gap-3">
                 <a
-                  href="/GiriAswin.pdf"
-                  download="GiriAswin.pdf"
+                  href="https://drive.google.com/uc?export=download&id=1urAlDi1oeSytbHpmha47wxzioE0MviiE"
                   className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-primary border border-white/10 hover:border-primary/50 text-white rounded-full text-sm font-medium transition-all duration-300 btn-scale group shadow-lg"
                 >
                   <Download size={16} className="group-hover:-translate-y-0.5 transition-transform" />
@@ -98,43 +105,24 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               )}
               
               {/* 
-                Zero-Latency Render Guard: We only mount the heavy PDF iframe AFTER the 
+                Zero-Latency Render Guard: We only mount the iframe AFTER the 
                 bezier-curve entrance animation has completely settled.
-                User Instruction: Place your file named EXACTLY 'GiriAswin.pdf' inside the /public folder before deploying.
               */}
               {isAnimationComplete && (
-                <object
-                  data="/GiriAswin.pdf#toolbar=0&navpanes=0&scrollbar=0"
-                  type="application/pdf"
-                  className="w-full h-full"
+                <iframe
+                  src="https://drive.google.com/file/d/1urAlDi1oeSytbHpmha47wxzioE0MviiE/preview"
+                  className="w-full h-full border-0"
                   data-lenis-prevent="true"
+                  allow="autoplay"
                   onLoad={() => setIsLoading(false)}
-                >
-                  {/* Fallback for browsers that don't support inline PDFs (e.g. some mobile browsers) */}
-                  <div className="flex flex-col items-center justify-center h-full p-8 text-center bg-surface w-full">
-                    <FileText size={48} className="text-gray-600 mb-4" />
-                    <h3 className="text-xl font-heading text-white mb-2">PDF Viewer Not Available</h3>
-                    <p className="text-gray-400 mb-6 max-w-md">
-                      Your browser doesn't support built-in PDF viewing. You can securely download the file to read it.
-                    </p>
-                    <a
-                      href="/GiriAswin.pdf"
-                      download="GiriAswin.pdf"
-                      className="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-full font-medium transition-all btn-scale shadow-lg shadow-primary/20"
-                    >
-                      <Download size={18} />
-                      Download Resume
-                    </a>
-                  </div>
-                </object>
+                ></iframe>
               )}
             </div>
 
             {/* Mobile Download CTA (fixed to bottom for small screens) */}
             <div className="sm:hidden absolute bottom-6 left-1/2 -translate-x-1/2 z-30">
               <a
-                href="/GiriAswin.pdf"
-                download="GiriAswin.pdf"
+                href="https://drive.google.com/uc?export=download&id=1urAlDi1oeSytbHpmha47wxzioE0MviiE"
                 className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full text-sm font-medium btn-scale shadow-[0_10px_40px_rgba(124,92,255,0.4)]"
               >
                 <Download size={18} />
