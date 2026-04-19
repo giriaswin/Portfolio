@@ -27,7 +27,13 @@ export default function SEO({ title, description, keywords, type = 'website', pa
       "Machine Learning",
       "React",
       "Python",
-      "Full Stack Engineering"
+      "Full Stack Engineering",
+      "Software Development",
+      "Data Analysis",
+      "Artificial Intelligence",
+      "Content Writing",
+      "Technical Blogging",
+      "SEO"
     ],
     "alumniOf": {
       "@type": "CollegeOrUniversity",

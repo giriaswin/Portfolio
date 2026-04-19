@@ -126,10 +126,10 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-primary">The Engineering Paradigm</h2>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
-              I don't just write code; I architect systems that solve complex problems. Striking the balance between data science and full-stack engineering, I operate with a bias for action and a zero-tolerance policy for bloat. My philosophy is simple: build it lean, build it fast, and make it bulletproof.
+              My work sits between data and application development, with an emphasis on structure, performance, and usability.
             </p>
             <p className="text-white font-medium leading-relaxed text-lg border-l-2 border-secondary pl-4 py-1 bg-secondary/5 rounded-r-lg">
-              Every system I build is engineered for real-world impact—merging rigorous data logic with unparalleled, intuitive user experiences.
+              The goal is to build systems that do their job well, without unnecessary complexity.
             </p>
           </motion.section>
 
@@ -142,7 +142,7 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-secondary">The Trajectory</h2>
             <p className="text-gray-300 leading-relaxed text-lg">
-              My objective is to constantly push the boundaries of what a solo engineer can deploy. By aggressively pursuing bleeding-edge tech and high-stakes problem solving, I aim to build platforms that don't just function—they dominate.
+              My objective is to grow through building systems that solve real problems and hold up over time.
             </p>
           </motion.section>
 
