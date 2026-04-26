@@ -51,7 +51,7 @@ export const servicesData = [
   },
   {
     id: "content-writing",
-    title: "Content Writing",
+    title: "Technical Writing",
     description: "Crafting narratives that convert. From technical documentation to compelling brand copywriting, I deliver precision-engineered words that resonate with your target audience and amplify your digital presence.",
     delivered: "High-impact copy, SEO-optimized technical articles, brand storytelling, and structured platform documentation.",
     forWho: "Founders, tech brands, and agencies needing to translate complex value propositions into clear, authoritative communication.",

@@ -12,8 +12,8 @@ export default function Services() {
   return (
     <PageTransition>
       <SEO 
-        title="Services | Giri Aswin" 
-        description="I build clean, responsive websites and systems that don't just look good — they actually work. Explore my freelance services."
+        title="What I Do | Giri Aswin" 
+        description="Building clean, responsive websites and systems that don't just look good — they actually work. Explore my freelance services."
         keywords="Freelance web development, data science consulting, full-stack services, custom web applications, UI/UX design"
         path="/services"
       />
@@ -23,7 +23,7 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-heading mb-4"
         >
-          Freelance Engineering Services
+          Services
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function Services() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl"
         >
-          I build high-performance web applications and data systems engineered for absolute precision and real-world scale.
+          High-performance web applications and data systems, built with precision, designed to scale, and made to perform reliably in real-world environments.
         </motion.p>
       </div>
 

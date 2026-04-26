@@ -7,7 +7,7 @@ export const educationData = [
     primaryMetric: "CGPA: 9.30",
     secondaryMetric: "88.3%",
     type: "pg",
-    focus: "Data Science & Applied ML"
+    focus: "Data Systems & Applied ML"
   },
   {
     id: "bca",
@@ -17,7 +17,7 @@ export const educationData = [
     primaryMetric: "CGPA: 7.28",
     secondaryMetric: "69.1%",
     type: "ug",
-    focus: "Software & Web Technologies"
+    focus: "Software Engineering & Web Technologies"
   },
   {
     id: "hsc",

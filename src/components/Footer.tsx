@@ -240,7 +240,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between w-full pt-8 border-t border-white/5">
           <div className="text-left mb-6 md:mb-0">
             <p className="text-sm text-gray-300 font-medium">© {new Date().getFullYear()} Giri Aswin</p>
-            <p className="text-xs text-gray-500 mt-1">Built with precision & intent</p>
+            <p className="text-xs text-gray-500 mt-1"><em>Built with precision & intent</em></p>
           </div>
           
           {/* 3. RIGHT SIDE — VIEW COUNT */}

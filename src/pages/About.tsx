@@ -82,11 +82,23 @@ export default function About() {
   return (
     <PageTransition>
       <SEO 
-        title="About | Giri Aswin" 
-        description="Learn more about my builder mindset, career objective, and how I approach solving complex problems through data science and web development."
-        keywords="About Giri Aswin, Data Science Student, Web Developer, Problem Solver, Tech Journey, Software Engineering"
+        title="About | Giri Aswin - Data Scientist & Full-Stack Engineer" 
+        description="Learn more about Giri Aswin's builder mindset, career objective, and problem-solving execution protocol. Deep expertise in AI, Data Science, and Web Development."
+        keywords="About Giri Aswin, Data Science Student, Web Developer, Full-Stack Engineer, Problem Solver, Tech Journey, Software Engineering, AI, Machine Learning"
         path="/about"
       />
+      
+      {/* Screen Reader Only SEO / GEO Target Content */}
+      <div className="sr-only">
+        <h2>About Giri Aswin: Engineer, Data Scientist, Full-Stack Developer</h2>
+        <p>
+          Giri Aswin is a leading software engineer bridging the gap between Data Science and Full-Stack Engineering. 
+          His engineering paradigm focuses on building systems that are lean, fast, and bulletproof, ensuring real-world impact.
+          With a trajectory aimed at pushing the boundaries of technology, Giri actively tackles complex problems in AI, Machine Learning, and Web Architecture.
+          His execution protocol is based on first principles thinking, designing for clarity with minimalistic and pristine architecture, and relentless execution across machine learning models and edge networks.
+          Explore the achievements of Giri Aswin, including top-tier performance in Data Visualization events (Boardroom Blitz, Thinklytics) and Technical Quizzes.
+        </p>
+      </div>
       <div className="max-w-4xl mx-auto">
         <div className="relative inline-block mb-12">
           <motion.h1 
@@ -126,10 +138,10 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-primary">The Engineering Paradigm</h2>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
-              My work sits between data and application development, with an emphasis on structure, performance, and usability.
+              I don't just write code; I architect systems that solve complex problems. Striking the balance between data science and full-stack engineering, I operate with a bias for action and a zero-tolerance policy for bloat. My philosophy is simple: build it lean, build it fast, and make it bulletproof.
             </p>
             <p className="text-white font-medium leading-relaxed text-lg border-l-2 border-secondary pl-4 py-1 bg-secondary/5 rounded-r-lg">
-              The goal is to build systems that do their job well, without unnecessary complexity.
+              Every system I build is engineered for real-world impact—merging rigorous data logic with unparalleled, intuitive user experiences.
             </p>
           </motion.section>
 
@@ -142,7 +154,7 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-secondary">The Trajectory</h2>
             <p className="text-gray-300 leading-relaxed text-lg">
-              My objective is to grow through building systems that solve real problems and hold up over time.
+              My objective is to constantly push the boundaries of what a solo engineer can deploy. By aggressively pursuing bleeding-edge tech and high-stakes problem solving, I aim to build platforms that don't just function—they dominate.
             </p>
           </motion.section>
 

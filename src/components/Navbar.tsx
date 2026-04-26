@@ -12,7 +12,7 @@ const navLinks = [
   { path: '/experience', label: 'Experience', icon: History },
   { path: '/education', label: 'Education', icon: GraduationCap },
   { path: '/skills', label: 'Skills', icon: Code2 },
-  { path: '/services', label: 'Services', icon: Layers },
+  { path: '/services', label: 'What I Do', icon: Layers },
   { path: '/contact', label: 'Contact', icon: Mail },
 ];
 

@@ -27,12 +27,12 @@ export default function App() {
     // Ultra smooth float behavior for premium scrolling feel
     const lenis = new Lenis({
       autoRaf: true,
-      lerp: 0.055, // Upgraded buttery smooth frame-independent interpolation
+      lerp: 0.08, // Increased lerp slightly to make scroll punchier and less "draggy"
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.1,
+      wheelMultiplier: 1.0,
       touchMultiplier: 1.5,
       syncTouch: true, // Synced scrolling for mobile devices to keep native physics feel
     });

@@ -8,11 +8,25 @@ export default function Skills() {
   return (
     <PageTransition>
       <SEO 
-        title="Skills & Tools | Giri Aswin" 
-        description="Technologies I use to build systems that work, including Python, React, Machine Learning, and Cloud."
-        keywords="Python skills, JavaScript tools, machine learning technologies, React, cloud computing, databases, full-stack skills"
+        title="Skills & System Design | Giri Aswin - Full-Stack & Data Engineer" 
+        description="Comprehensive list of tools, programming languages, and system architectures Giri Aswin uses: Full-Stack Systems, Data Pipelines, Cloud Deployment, and Core Engineering."
+        keywords="Giri Aswin skills, Python, JavaScript, HTML, CSS, React, TypeScript, Node.js, Flask, REST APIs, SQL, NoSQL, Git, GitHub, Pandas, NumPy, Scikit-learn, EDA, Data Cleaning, Matplotlib, Seaborn, AWS, GCP, Data Systems, Data Pipelines, API Architecture, Workflow Automation"
         path="/skills"
       />
+      
+      {/* Screen Reader Only SEO / GEO Target Content */}
+      <div className="sr-only">
+        <h2>Giri Aswin's Technical Skills and System Capabilities</h2>
+        <p>
+          As an experienced software engineer and full-stack developer, I possess a deep skill set organized into critical domains.
+          Under Full-Stack Systems, I build end-to-end applications using HTML, CSS, React, TypeScript, Node.js, Flask, REST APIs, SQL, NoSQL, Git, and GitHub.
+          My Data Systems expertise covers analytics and pipelines using Pandas, NumPy, Scikit-learn, EDA, Data Cleaning, Matplotlib, and Seaborn.
+          Core Engineering involves logic and system building with Python, JavaScript, and SQL.
+          For Cloud and Deployment, I operate in running environments utilizing AWS, GCP, and API Hosting.
+          And for System Design, I structure and connect workflows like Data to Insight Pipelines, API Architectures, and Workflow Automation.
+          I am passionate about building data-driven systems with full-stack execution.
+        </p>
+      </div>
       <div className="mb-12">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
@@ -32,142 +46,152 @@ export default function Skills() {
       </div>
 
       {/* Bento Grid */}
-      <div className="grid grid-cols-6 gap-4 mb-20 auto-rows-[minmax(120px,auto)]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-20 auto-rows-[minmax(140px,auto)]">
         
-        {/* Programming (Span 2x2) */}
+        {/* Full-Stack Systems (Span 7) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3 }}
-          className="col-span-6 md:col-span-2 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(124,92,255,0.1)] transition-all duration-[240ms] ease-out z-10"
+          className="col-span-1 md:col-span-7 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-[18px] group hover:-translate-y-1 hover:border-blue-500/40 hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] transition-all duration-[300ms] ease-out z-10 flex flex-col"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.12),transparent_70%)] transition-all duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.15),transparent_70%)] transition-all duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
-          
-          <div className="flex items-center justify-between mb-3 relative z-10">
-            <h3 className="text-lg font-heading text-white">Programming</h3>
-            <Code2 size={18} className="text-white/20" />
+
+          <div className="flex items-start justify-between mb-2 relative z-10">
+            <div>
+              <h3 className="text-xl font-heading text-white group-hover:text-blue-400 transition-colors duration-300">Full-Stack Systems</h3>
+              <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-400 mt-1 mb-4">End-to-end application development</p>
+            </div>
+            <Layout size={20} className="text-white/20 group-hover:text-blue-400/50 transition-colors" />
           </div>
-          <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent mb-4 relative z-10" />
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["Python", "JavaScript", "SQL"].map(skill => (
-              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-300 hover:scale-105 hover:bg-white/10 transition-all duration-[240ms] ease-out cursor-default">{skill}</span>
+          <div className="flex flex-wrap gap-2 relative z-10 mt-auto">
+            {["HTML", "CSS", "React", "TypeScript", "Node.js", "Flask", "REST APIs", "SQL & NoSQL", "Git", "GitHub"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-200 hover:scale-105 hover:bg-blue-500/20 hover:border-blue-500/30 transition-all duration-[240ms] ease-out cursor-default shadow-[inset_0_1px_rgba(255,255,255,0.05)] text-center sm:text-left">{skill}</span>
             ))}
           </div>
         </motion.div>
 
-        {/* Data & ML (Span 4x2) */}
+        {/* Data Systems (Span 5) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.05 }}
-          className="col-span-6 md:col-span-4 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(255,122,24,0.1)] transition-all duration-[240ms] ease-out z-10"
+          className="col-span-1 md:col-span-5 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-[18px] group hover:-translate-y-1 hover:border-secondary/40 hover:shadow-[0_8px_30px_rgba(255,122,24,0.15)] transition-all duration-[300ms] ease-out z-10 flex flex-col"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,122,24,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(255,122,24,0.12),transparent_70%)] transition-all duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,122,24,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(255,122,24,0.15),transparent_70%)] transition-all duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
 
-          <div className="flex items-center justify-between mb-3 relative z-10">
-            <h3 className="text-lg font-heading text-white">Data & Machine Learning</h3>
-            <Database size={18} className="text-white/20" />
+          <div className="flex items-start justify-between mb-2 relative z-10">
+            <div>
+              <h3 className="text-xl font-heading text-white group-hover:text-secondary transition-colors duration-300">Data Systems</h3>
+              <p className="text-[10px] md:text-xs uppercase tracking-wider text-gray-400 mt-1 mb-4">Analytics & pipelines</p>
+            </div>
+            <Database size={20} className="text-white/20 group-hover:text-secondary/50 transition-colors" />
           </div>
-          <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent mb-4 relative z-10" />
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["Pandas", "NumPy", "Scikit-learn", "Matplotlib", "Seaborn"].map(skill => (
-              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-300 hover:scale-105 hover:bg-white/10 transition-all duration-[240ms] ease-out cursor-default">{skill}</span>
+          <div className="flex flex-wrap gap-2 relative z-10 mt-auto">
+            {["Pandas", "NumPy", "Scikit-learn", "EDA", "Data Cleaning", "Matplotlib", "Seaborn"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-200 hover:scale-105 hover:bg-secondary/20 hover:border-secondary/30 transition-all duration-[240ms] ease-out cursor-default shadow-[inset_0_1px_rgba(255,255,255,0.05)] text-center sm:text-left">{skill}</span>
             ))}
           </div>
         </motion.div>
 
-        {/* Web Dev (Span 3x2) */}
+        {/* Core Engineering (Span 6) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.1 }}
-          className="col-span-6 md:col-span-3 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(124,92,255,0.1)] transition-all duration-[240ms] ease-out z-10"
+          className="col-span-1 md:col-span-6 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_8px_30px_rgba(124,92,255,0.15)] transition-all duration-[300ms] ease-out z-10 flex flex-col"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.12),transparent_70%)] transition-all duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(124,92,255,0.15),transparent_70%)] transition-all duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
-
-          <div className="flex items-center justify-between mb-3 relative z-10">
-            <h3 className="text-lg font-heading text-white">Web Development</h3>
-            <Layout size={18} className="text-white/20" />
+          
+          <div className="flex items-start justify-between mb-2 relative z-10">
+            <div>
+              <h3 className="text-lg font-heading text-white group-hover:text-primary transition-colors duration-300">Core Engineering</h3>
+              <p className="text-[10px] uppercase tracking-wider text-gray-400 mt-1 mb-3">Logic & system building</p>
+            </div>
+            <Code2 size={18} className="text-white/20 group-hover:text-primary/50 transition-colors" />
           </div>
-          <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent mb-4 relative z-10" />
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["HTML", "CSS", "React", "Flask", "REST APIs"].map(skill => (
-              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-300 hover:scale-105 hover:bg-white/10 transition-all duration-[240ms] ease-out cursor-default">{skill}</span>
+          <div className="flex flex-wrap gap-2 relative z-10 mt-auto">
+            {["Python", "JavaScript", "SQL"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-200 hover:scale-105 hover:bg-primary/20 hover:border-primary/30 transition-all duration-[240ms] ease-out cursor-default shadow-[inset_0_1px_rgba(255,255,255,0.05)] w-full sm:w-auto text-center">{skill}</span>
             ))}
           </div>
         </motion.div>
 
-        {/* Databases & Tools (Span 3x2) */}
+        {/* Cloud & Deployment (Span 6) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.15 }}
-          className="col-span-6 md:col-span-3 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-[240ms] ease-out z-10"
+          className="col-span-1 md:col-span-6 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)] transition-all duration-[300ms] ease-out z-10 flex flex-col"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.04),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_70%)] transition-all duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.15),transparent_70%)] transition-all duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
 
-          <div className="flex items-center justify-between mb-3 relative z-10">
-            <h3 className="text-lg font-heading text-white">Databases & Tools</h3>
-            <Wrench size={18} className="text-white/20" />
+          <div className="flex items-start justify-between mb-2 relative z-10">
+            <div>
+              <h3 className="text-lg font-heading text-white group-hover:text-emerald-400 transition-colors duration-300">Cloud & Deployment</h3>
+              <p className="text-[10px] uppercase tracking-wider text-gray-400 mt-1 mb-3">Running environments</p>
+            </div>
+            <Cloud size={18} className="text-white/20 group-hover:text-emerald-400/50 transition-colors" />
           </div>
-          <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent mb-4 relative z-10" />
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["MySQL", "Firebase", "Git", "GitHub"].map(skill => (
-              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-300 hover:scale-105 hover:bg-white/10 transition-all duration-[240ms] ease-out cursor-default">{skill}</span>
+          <div className="flex flex-wrap gap-2 relative z-10 mt-auto">
+            {["AWS", "GCP", "API Hosting"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-200 hover:scale-105 hover:bg-emerald-500/20 hover:border-emerald-500/30 transition-all duration-[240ms] ease-out cursor-default shadow-[inset_0_1px_rgba(255,255,255,0.05)] w-full sm:w-auto text-center">{skill}</span>
             ))}
           </div>
         </motion.div>
 
-        {/* Cloud (Span 2x2) */}
+        {/* System Design (Span 5) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.2 }}
-          className="col-span-6 md:col-span-2 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_30px_rgba(255,255,255,0.05)] transition-all duration-[240ms] ease-out z-10"
+          className="col-span-1 md:col-span-5 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover:-translate-y-1 hover:border-fuchsia-400/40 hover:shadow-[0_8px_30px_rgba(232,121,249,0.15)] transition-all duration-[300ms] ease-out z-10 flex flex-col"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.04),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_70%)] transition-all duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(232,121,249,0.06),transparent_60%)] group-hover:bg-[radial-gradient(circle_at_top_left,rgba(232,121,249,0.15),transparent_70%)] transition-all duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
 
-          <div className="flex items-center justify-between mb-3 relative z-10">
-            <h3 className="text-lg font-heading text-white">Cloud (Basic)</h3>
-            <Cloud size={18} className="text-white/20" />
+          <div className="flex items-start justify-between mb-2 relative z-10">
+            <div>
+              <h3 className="text-lg font-heading text-white group-hover:text-fuchsia-400 transition-colors duration-300">System Design</h3>
+              <p className="text-[10px] uppercase tracking-wider text-gray-400 mt-1 mb-3">Connecting workflows</p>
+            </div>
+            <Wrench size={18} className="text-white/20 group-hover:text-fuchsia-400/50 transition-colors" />
           </div>
-          <div className="h-[1px] w-full bg-gradient-to-r from-white/10 to-transparent mb-4 relative z-10" />
-          <div className="flex flex-wrap gap-2 relative z-10">
-            {["AWS", "GCP"].map(skill => (
-              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-300 hover:scale-105 hover:bg-white/10 transition-all duration-[240ms] ease-out cursor-default">{skill}</span>
+          <div className="flex flex-col gap-2 relative z-10 mt-auto">
+            {["Data → Insight Pipelines", "API Architecture", "Workflow Automation"].map((skill) => (
+              <span key={skill} className="px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-sm text-gray-200 hover:scale-105 hover:bg-fuchsia-500/20 hover:border-fuchsia-500/30 transition-all duration-[240ms] ease-out cursor-default shadow-[inset_0_1px_rgba(255,255,255,0.05)]">{skill}</span>
             ))}
           </div>
         </motion.div>
 
-        {/* Highlight Card (Span 4x2) */}
+        {/* Hero Card (Span 7) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.3, delay: 0.25 }}
-          className="col-span-6 md:col-span-4 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 rounded-[18px] group hover-disable hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_8px_40px_rgba(124,92,255,0.15)] transition-all duration-[240ms] ease-out flex items-center justify-center text-center z-10"
+          className="col-span-1 md:col-span-7 md:row-span-2 relative overflow-hidden bg-card/80 backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-[18px] hover:-translate-y-1 hover:border-white/20 transition-all duration-[300ms] hover:shadow-[0_8px_40px_rgba(124,92,255,0.15)] ease-out flex items-center justify-center text-center md:text-left z-10 group"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-50 pointer-events-none -z-10" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-[240ms] ease-out pointer-events-none -z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-[300ms] ease-out pointer-events-none -z-10" />
           <div className="absolute inset-0 noise-bg opacity-[0.02] mix-blend-overlay pointer-events-none -z-10" />
           
-          <div className="absolute top-4 right-4 text-white/10 group-hover:text-white/20 transition-colors duration-300">
+          <div className="absolute top-4 right-4 md:top-6 md:right-6 text-white/10 group-hover:text-white/30 transition-colors duration-300">
             <Sparkles size={24} />
           </div>
 
-          <h3 className="text-2xl md:text-3xl font-heading text-white relative z-10 leading-tight">
-            Data-focused Developer<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">with full-stack capability</span>
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-heading text-white relative z-10 leading-tight w-full">
+            Building data-driven systems<br className="hidden md:block"/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary ml-1 md:ml-0 md:mt-2 block">with full-stack execution.</span>
           </h3>
         </motion.div>
 
