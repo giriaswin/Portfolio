@@ -9,7 +9,7 @@ export default function Experience() {
       <SEO 
         title="Experience | Giri Aswin" 
         description="My professional journey and internships in Data Science and Cloud Computing."
-        keywords="Data science internships, cloud computing experience, professional journey, software engineering roles, tech experience"
+        keywords="Data science internship, cloud computing experience, professional journey, software engineering roles, tech experiences"
         path="/experience"
       />
       <div className="mb-12">

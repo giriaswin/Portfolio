@@ -18,12 +18,12 @@ export default function Skills() {
       <div className="sr-only">
         <h2>Giri Aswin's Technical Skills and System Capabilities</h2>
         <p>
-          As an experienced software engineer and full-stack developer, I possess a deep skill set organized into critical domains.
+          As an experienced data systems engineer and full-stack developer, I possess a deep skill set organized into critical domains.
           Under Full-Stack Systems, I build end-to-end applications using HTML, CSS, React, TypeScript, Node.js, Flask, REST APIs, SQL, NoSQL, Git, and GitHub.
           My Data Systems expertise covers analytics and pipelines using Pandas, NumPy, Scikit-learn, EDA, Data Cleaning, Matplotlib, and Seaborn.
           Core Engineering involves logic and system building with Python, JavaScript, and SQL.
           For Cloud and Deployment, I operate in running environments utilizing AWS, GCP, and API Hosting.
-          And for System Design, I structure and connect workflows like Data to Insight Pipelines, API Architectures, and Workflow Automation.
+          And for System Design, Structureing and connecting workflows like Data to Insight Pipelines, API Architectures, and Workflow Automation.
           I am passionate about building data-driven systems with full-stack execution.
         </p>
       </div>
@@ -41,7 +41,7 @@ export default function Skills() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg"
         >
-          Technologies I use to build systems that work.
+          Technologies that I use to build systems that actually work.
         </motion.p>
       </div>
 

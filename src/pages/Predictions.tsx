@@ -19,7 +19,7 @@ export default function Predictions() {
     <PageTransition>
       <SEO 
         title="ML Predictions | Giri Aswin" 
-        description="Applying machine learning to solve complex forecasting and classification problems. View my ML prediction projects."
+        description="Using machine learning to solve complex forecasting and classification problems. View my ML prediction projects."
         keywords="Machine learning predictions, forecasting models, classification problems, data science projects, ML portfolio, Python ML"
         path="/predictions"
       />
@@ -38,7 +38,7 @@ export default function Predictions() {
           transition={{ type: "spring", stiffness: 350, damping: 30, delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl transform-gpu"
         >
-          Applying machine learning to solve complex forecasting and classification problems.
+          Using machine learning to solve complex forecasting and classification problems.
         </motion.p>
       </div>
 

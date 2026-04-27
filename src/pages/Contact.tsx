@@ -17,8 +17,8 @@ export default function Contact() {
     <PageTransition>
       <SEO 
         title="Contact | Giri Aswin" 
-        description="Get in touch to discuss your next project or opportunity. I'm highly responsive on WhatsApp and email."
-        keywords="Contact Giri Aswin, hire full-stack developer, freelance data scientist, WhatsApp contact, software engineer contact"
+        description="Get in touch to discuss our next project or opportunity. I'm highly responsive on WhatsApp and email."
+        keywords="Contact Giri Aswin, hire full-stack developer, freelance, data scientist, WhatsApp contact, software engineer contact"
         path="/contact"
       />
       <div className="mb-12">
@@ -35,7 +35,7 @@ export default function Contact() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg"
         >
-          Let's discuss your next project or opportunity.
+          Let's discuss our next project or opportunity.
         </motion.p>
       </div>
 

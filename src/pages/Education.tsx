@@ -20,7 +20,7 @@ export default function Education() {
       <SEO 
         title="Education | Giri Aswin" 
         description="My academic background, including my M.Sc. in Applied Data Science and BCA."
-        keywords="M.Sc. Applied Data Science, BCA, academic background, computer science education, SRM IST, data science degree"
+        keywords="M.Sc. Applied Data Science, BCA, academic background, computer science education, SRM IST, SRM Institute of Science and Technology, data science degree"
         path="/education"
       />
       <div className="mb-16">
@@ -37,7 +37,7 @@ export default function Education() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl"
         >
-          My academic journey and qualifications.
+          Academic journey and qualifications.
         </motion.p>
       </div>
 

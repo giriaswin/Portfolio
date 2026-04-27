@@ -15,7 +15,7 @@ export const predictionsData = [
     problem: "Lack of insights into how lifestyle and behavioral data affect sleep quality.",
     approach: "Built a classification model to analyze patterns related to stress, activity levels, and daily habits.",
     modelType: "Gradient Boosting (XGBoost)",
-    metrics: "92% Accuracy",
+    metrics: "90% Accuracy",
     outcome: "Provided a basic foundation for wellness insights by identifying key factors affecting sleep.",
     tech: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"]
   },

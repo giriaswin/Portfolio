@@ -134,7 +134,7 @@ export default function Projects() {
     <PageTransition>
       <SEO 
         title="Projects | Giri Aswin" 
-        description="Explore my selected work, including full-stack applications, data visualization dashboards, and AI-driven systems."
+        description="Explore my works, including full-stack applications, data visualization dashboards, and AI-driven systems."
         keywords="React projects, full-stack development, data visualization projects, AI systems, portfolio projects, web applications"
         path="/projects"
         structuredData={structuredData}
@@ -153,7 +153,7 @@ export default function Projects() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl"
         >
-          Engineered systems and applications designed for performance, scalability, and meaningful real-world impact.
+          Engineered systems and applications designed for performance, scalability and meaningful real-world impact.
         </motion.p>
       </div>
 

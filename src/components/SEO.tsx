@@ -10,10 +10,10 @@ interface SEOProps {
 }
 
 export default function SEO({ title, description, keywords, type = 'website', path = '', structuredData }: SEOProps) {
-  const siteUrl = 'https://giriaswin.vercel.app'; // Replace with actual domain when deployed
+  const siteUrl = 'https://giriaswin.vercel.app'; 
   const url = `${siteUrl}${path}`;
 
-  const defaultKeywords = "Giri Aswin, software engineer, full-stack developer, data scientist, data systems, machine learning, React, TypeScript, Node.js, Flask, Python, AWS, GCP, REST APIs, SQL, NoSQL, Git, GitHub, Pandas, NumPy, Scikit-learn, EDA, API architecture, workflow automation, core engineering, web development, software engineering, AI, system design";
+  const defaultKeywords = "Giri Aswin, full-stack developer, data-driven systems, product engineering, data pipelines, API architecture, workflow automation, web application development, system design, backend engineering, frontend engineering, React, TypeScript, Node.js, Python, Flask, SQL, NoSQL, machine learning, data analytics, dashboard systems, REST APIs, cloud deployment, AWS, GCP, scalable systems, performance optimization";
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
   // Extremely Rich JSON-LD Structured Data for AEO/GEO integration 
@@ -26,35 +26,37 @@ export default function SEO({ title, description, keywords, type = 'website', pa
         "name": "Giri Aswin",
         "url": siteUrl,
         "jobTitle": ["Full Stack Developer", "Data Systems Engineer", "Software Engineer"],
-        "description": "Giri Aswin is a software engineer specializing in end-to-end full-stack systems, data analytics pipelines, API architecture, and workflow automation. Building data-driven systems with full-stack execution.",
+        "description": "Designs data-driven systems through full-stack engineering, focusing on clarity, performance, and reliable real-world deployment.",
         "knowsAbout": [
-          "Full-Stack Development",
-          "Data Systems",
-          "Core Engineering",
-          "System Design",
-          "Cloud & Deployment",
-          "API Architecture",
-          "Workflow Automation",
-          "Python",
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Node.js",
-          "Flask",
-          "SQL",
-          "NoSQL",
-          "AWS",
-          "GCP",
-          "Pandas",
-          "NumPy",
-          "Scikit-learn",
-          "EDA",
-          "Data Cleaning",
-          "Machine Learning",
-          "Data Analytics",
-          "REST APIs",
-          "Git",
-          "GitHub"
+            "Full-Stack Development",
+            "Data Systems",
+            "Product Engineering",
+            "Data Pipelines",
+            "API Architecture",
+            "Workflow Automation",
+            "System Design",
+            "Backend Engineering",
+            "Frontend Engineering",
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Python",
+            "Flask",
+            "SQL",
+            "NoSQL",
+            "Machine Learning",
+            "Data Analytics",
+            "Dashboard Systems",
+            "REST APIs",
+            "Cloud Deployment",
+            "AWS",
+            "GCP",
+            "Performance Optimization",
+            "Scalability",
+            "Reliability",
+            "Git",
+            "GitHub",
+            "CI/CD"
         ],
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -112,6 +114,9 @@ export default function SEO({ title, description, keywords, type = 'website', pa
       <meta name="author" content="Giri Aswin" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="language" content="English" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="theme-color" content="#7C5CFF" />
+
       
       {/* Open Graph / Facebook */}
       <meta property="og:site_name" content="Giri Aswin | Full-Stack & Data Systems Engineer" />
@@ -134,6 +139,10 @@ export default function SEO({ title, description, keywords, type = 'website', pa
       
       {/* Canonical URL for strict SEO indexing */}
       <link rel="canonical" href={url} />
+      <link rel="icon" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/favicon.svg" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
       {/* Advanced Structured Data for AEO / GEO */}
       <script type="application/ld+json">

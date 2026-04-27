@@ -37,15 +37,15 @@ export default function Home() {
   return (
     <PageTransition className="flex flex-col justify-center min-h-[calc(100vh-80px)]">
       <SEO 
-        title="Giri Aswin | Data Scientist & Full-Stack Developer" 
-        description="I build practical systems that solve real problems. Specializing in end-to-end full-stack systems, data pipelines, API architecture, workflow automation, and React, Node.js, Python development."
+        title="Giri Aswin | Data Systems & Full-Stack Engineer" 
+        description="Building practical systems that solve real problems. Specializing in end-to-end full-stack systems, data pipelines, API architecture, workflow automation, and React, Node.js, Python development."
         keywords="Giri Aswin, Portfolio, Data Scientist, Full-Stack Developer, React, Python, Machine Learning, Web Development, Data Systems, Node.js, Flask, AWS, GCP, API Architecture, Software Engineer"
         path="/"
       />
       
       {/* Screen Reader Only SEO / GEO Target Content */}
       <div className="sr-only">
-        <h1>Giri Aswin - Data Scientist and Full-Stack Developer</h1>
+        <h1>Giri Aswin - Data Systems & Full-Stack Engineer</h1>
         <p>
           Welcome to the portfolio of Giri Aswin. I am a software engineer and data scientist specializing
           in building data-driven systems with full-stack execution. My core engineering skills include
@@ -104,7 +104,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg md:text-xl text-gray-400 max-w-xl mb-10 leading-relaxed font-body"
           >
-            Focused on data-driven development, practical applications, and clean user experiences.
+            Focused on data-driven development, practical applications and clean user experiences.
           </motion.p>
 
           <motion.div 
