@@ -134,7 +134,7 @@ export default function Projects() {
     <PageTransition>
       <SEO 
         title="Projects | Giri Aswin" 
-        description="Explore my works, including full-stack applications, data visualization dashboards, and AI-driven systems."
+        description="Explore present and past works, including full-stack applications, data visualization dashboards, and AI-driven systems."
         keywords="React projects, full-stack development, data visualization projects, AI systems, portfolio projects, web applications"
         path="/projects"
         structuredData={structuredData}

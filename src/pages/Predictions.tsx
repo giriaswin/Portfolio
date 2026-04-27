@@ -19,7 +19,7 @@ export default function Predictions() {
     <PageTransition>
       <SEO 
         title="ML Predictions | Giri Aswin" 
-        description="Using machine learning to solve complex forecasting and classification problems. View my ML prediction projects."
+        description="Designing ML models and systems to solve complex forecasting and classification problems. View my ML prediction projects."
         keywords="Machine learning predictions, forecasting models, classification problems, data science projects, ML portfolio, Python ML"
         path="/predictions"
       />

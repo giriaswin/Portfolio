@@ -83,16 +83,16 @@ export default function About() {
     <PageTransition>
       <SEO 
         title="About | Giri Aswin" 
-        description="Learn more about Giri Aswin's builder mindset, career objective, and problem-solving execution protocol. Deep expertise in AI, Data Science, and Web Development."
+        description="Learn more about the builder mindset, career objective, and problem-solving execution protocol. Deep expertise in AI, Data Science, and Web Development."
         keywords="About Giri Aswin, Data Science Student, Web Developer, Full-Stack Engineer, Problem Solver, Tech Journey, Software Engineering, AI, Machine Learning"
         path="/about"
       />
       
       {/* Screen Reader Only SEO / GEO Target Content */}
       <div className="sr-only">
-        <h2>About Giri Aswin: Engineer, Data Scientist, Full-Stack Developer</h2>
+        <h2>About Giri Aswin: Data Systems & Full-Stack Engineer </h2>
         <p>
-          Giri Aswin is a leading software engineer bridging the gap between Data Science and Full-Stack Engineering. 
+          Giri Aswin is a system engineer bridging the gap between Data Science and Full-Stack Engineering. 
           His engineering paradigm focuses on building systems that are lean, fast, and bulletproof, ensuring real-world impact.
           With a trajectory aimed at pushing the boundaries of technology, Giri actively tackles complex problems in AI, Machine Learning, and Web Architecture.
           His execution protocol is based on first principles thinking, designing for clarity with minimalistic and pristine architecture, and relentless execution across machine learning models and edge networks.
@@ -138,10 +138,10 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-primary">The Engineering Paradigm</h2>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
-              Systems are built to solve real problems, not to showcase tools. The work sits at the intersection of data and full-stack engineering—focused on clarity, speed, and stability. Each build is kept lean, avoiding unnecessary layers, while ensuring it holds up under real-world use.
+              Systems are built to solve real-world problems and not to showcase tools. The work sits at the intersection of data and full-stack engineering - focused on clarity, speed, and stability. Each build is kept to learn, avoiding unnecessary layers, while ensuring it holds up under the real-world use.
             </p>
             <p className="text-white font-medium leading-relaxed text-lg border-l-2 border-secondary pl-4 py-1 bg-secondary/5 rounded-r-lg">
-              Data logic and user experience are treated as a single system, not separate concerns.
+              Data logic and user experience are treated as a single system and not as two separate concerns.
             </p>
           </motion.section>
 
@@ -154,9 +154,9 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-secondary">The Trajectory</h2>
             <p className="text-gray-300 leading-relaxed text-lg">
-              The focus is on building complete, usable systems as a solo engineer—end to end. Exploration stays practical, with an emphasis on solving meaningful problems and delivering reliable outcomes.
+              The focus is on building complete, usable systems end-to-end. Exploration stays practical, with an emphasis on solving meaningful problems and delivering reliable outcomes.
               <br />
-              The goal is simple: Develop systems that remains useful, stable, and easy to work with over time.
+              <b>The goal is simple: </b>Develop systems that remain useful, stable and easy to work with over time.
             </p>
           </motion.section>
 
@@ -173,14 +173,14 @@ export default function About() {
                 <span className="text-primary mt-1 font-mono">01.</span>
                 <div>
                   <strong className="text-white block tracking-wide">First Principles Thinking</strong>
-                  Before writing syntax, I deconstruct the problem to its fundamental truths. What is the actual bottleneck? Why does this system need to exist?
+                  Before writing syntax, First deconstruct the problem to its fundamental truths. What is the actual bottleneck? Why does this system need to exist?
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary mt-1 font-mono">02.</span>
                 <div>
                   <strong className="text-white block tracking-wide">Design for Clarity</strong>
-                  Minimalism isn't just an aesthetic; it's a performance metric. I strip away the superfluous to ensure intuitive UX and pristine architecture.
+                  Minimalism isn't just an aesthetic; it's a performance metric. Always strip away the superfluous to ensure intuitive UX and pristine architecture.
                 </div>
               </li>
               <li className="flex items-start gap-3">

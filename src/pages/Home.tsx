@@ -47,7 +47,7 @@ export default function Home() {
       <div className="sr-only">
         <h1>Giri Aswin - Data Systems & Full-Stack Engineer</h1>
         <p>
-          Welcome to the portfolio of Giri Aswin. I am a software engineer and data scientist specializing
+          Welcome to the portfolio. I am a software engineer and data scientist specializing
           in building data-driven systems with full-stack execution. My core engineering skills include
           Python, JavaScript, TypeScript, React, Node.js, Flask, SQL, and NoSQL. I design robust data systems
           using Pandas, NumPy, Scikit-learn, EDA, Matplotlib, and Seaborn. I also lead cloud and deployment

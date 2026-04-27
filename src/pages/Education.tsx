@@ -19,7 +19,7 @@ export default function Education() {
     <PageTransition>
       <SEO 
         title="Education | Giri Aswin" 
-        description="My academic background, including my M.Sc. in Applied Data Science and BCA."
+        description="Academic background, including my M.Sc. in Applied Data Science and BCA."
         keywords="M.Sc. Applied Data Science, BCA, academic background, computer science education, SRM IST, SRM Institute of Science and Technology, data science degree"
         path="/education"
       />
