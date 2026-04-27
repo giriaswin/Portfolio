@@ -82,7 +82,7 @@ export default function About() {
   return (
     <PageTransition>
       <SEO 
-        title="About | Giri Aswin - Data Scientist & Full-Stack Engineer" 
+        title="About | Giri Aswin" 
         description="Learn more about Giri Aswin's builder mindset, career objective, and problem-solving execution protocol. Deep expertise in AI, Data Science, and Web Development."
         keywords="About Giri Aswin, Data Science Student, Web Developer, Full-Stack Engineer, Problem Solver, Tech Journey, Software Engineering, AI, Machine Learning"
         path="/about"
@@ -138,10 +138,10 @@ export default function About() {
           >
             <h2 className="text-2xl font-heading mb-4 text-primary">The Engineering Paradigm</h2>
             <p className="text-gray-300 leading-relaxed text-lg mb-4">
-              Systems are built to solve real problems, not to showcase tools. <br /> The work sits at the intersection of data and full-stack engineering—focused on clarity, speed, and stability.
+              Systems are built to solve real problems, not to showcase tools. The work sits at the intersection of data and full-stack engineering—focused on clarity, speed, and stability. Each build is kept lean, avoiding unnecessary layers, while ensuring it holds up under real-world use.
             </p>
             <p className="text-white font-medium leading-relaxed text-lg border-l-2 border-secondary pl-4 py-1 bg-secondary/5 rounded-r-lg">
-              Each build is kept lean, avoiding unnecessary layers, while ensuring it holds up under real-world use. Data logic and user experience are treated as a single system, not separate concerns.
+              Data logic and user experience are treated as a single system, not separate concerns.
             </p>
           </motion.section>
 
@@ -156,8 +156,7 @@ export default function About() {
             <p className="text-gray-300 leading-relaxed text-lg">
               The focus is on building complete, usable systems as a solo engineer—end to end. Exploration stays practical, with an emphasis on solving meaningful problems and delivering reliable outcomes.
               <br />
-              <br />
-              The goal is simple: build systems that remains useful, stable, and easy to work with over time.
+              The goal is simple: Develop systems that remains useful, stable, and easy to work with over time.
             </p>
           </motion.section>
 

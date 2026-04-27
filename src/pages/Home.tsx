@@ -221,7 +221,7 @@ export default function Home() {
                     <span className="font-medium font-body text-white/50 tracking-[2px] uppercase" style={{ fontSize: '0.45rem' }}>ACCESS // ALL</span>
                   </div>
                   <div className="text-right flex flex-col items-end justify-end opacity-70">
-                    <span className="font-bold font-body text-primary tracking-[2px] uppercase" style={{ fontSize: '0.45rem' }}>INDIA</span>
+                    <span className="font-bold font-body text-primary tracking-[2px] uppercase" style={{ fontSize: '0.45rem' }}>SYSTEM // ACTIVE</span>
                   </div>
                 </div>
 

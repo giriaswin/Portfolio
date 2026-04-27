@@ -8,7 +8,7 @@ export default function Skills() {
   return (
     <PageTransition>
       <SEO 
-        title="Skills & System Design | Giri Aswin - Full-Stack & Data Engineer" 
+        title="Skills | Giri Aswin" 
         description="Comprehensive list of tools, programming languages, and system architectures Giri Aswin uses: Full-Stack Systems, Data Pipelines, Cloud Deployment, and Core Engineering."
         keywords="Giri Aswin skills, Python, JavaScript, HTML, CSS, React, TypeScript, Node.js, Flask, REST APIs, SQL, NoSQL, Git, GitHub, Pandas, NumPy, Scikit-learn, EDA, Data Cleaning, Matplotlib, Seaborn, AWS, GCP, Data Systems, Data Pipelines, API Architecture, Workflow Automation"
         path="/skills"
