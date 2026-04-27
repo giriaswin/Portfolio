@@ -16,7 +16,7 @@ export default function Skills() {
       
       {/* Screen Reader Only SEO / GEO Target Content */}
       <div className="sr-only">
-        <h2>Giri Aswin's Technical Skills and System Capabilities</h2>
+        <h2>Technical Skills and System Capabilities</h2>
         <p>
           As an experienced data systems engineer and full-stack developer, I possess a deep skill set organized into critical domains.
           Under Full-Stack Systems, I build end-to-end applications using HTML, CSS, React, TypeScript, Node.js, Flask, REST APIs, SQL, NoSQL, Git, and GitHub.
@@ -41,7 +41,7 @@ export default function Skills() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg"
         >
-          Technologies that I use to build systems that actually work.
+          Technologies I’m familiar with and use to build real-world systems.
         </motion.p>
       </div>
 

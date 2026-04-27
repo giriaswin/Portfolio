@@ -14,7 +14,7 @@ export default function Services() {
       <SEO 
         title="What I Do | Giri Aswin" 
         description="Building clean, responsive websites and systems that don't just look good — they actually work. Explore my freelance services."
-        keywords="Freelance web development, data science consulting, full-stack services, custom web applications, UI/UX design"
+        keywords="Freelance web development, data science consulting, full-stack services, custom web applications, UI/UX design, technical writing"
         path="/services"
       />
       <div className="mb-12">
@@ -31,7 +31,7 @@ export default function Services() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl"
         >
-          High-performance web applications and data systems, built with precision, designed to scale, and made to perform reliably in real-world environments.
+          High-performance web applications and data systems - built with precision, designed to scale and trusted to perform in real-world environments.
         </motion.p>
       </div>
 

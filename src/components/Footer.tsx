@@ -179,7 +179,7 @@ export default function Footer() {
           transition={{ delay: 0.3, duration: 0.3 }}
           className="text-gray-400 text-lg mb-12 max-w-md"
         >
-          Open to collaborations, projects, and meaningful work.
+          Open to collaborations, projects and meaningful work.
         </motion.p>
 
         {/* 2. CENTER — SOCIAL */}

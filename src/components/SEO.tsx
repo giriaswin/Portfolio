@@ -130,7 +130,8 @@ export default function SEO({ title, description, keywords, type = 'website', pa
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@giriaswin" />
+      <meta name="twitter:site" content="@rgiriaswin" />
+      <meta name="twitter:creator" content="@rgiriaswin" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

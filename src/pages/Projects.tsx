@@ -153,7 +153,7 @@ export default function Projects() {
           transition={{ delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl"
         >
-          Engineered systems and applications designed for performance, scalability and meaningful real-world impact.
+          Engineered systems and applications that designed for performance, scalability and meaningful real-world impact.
         </motion.p>
       </div>
 

@@ -38,7 +38,7 @@ export default function Predictions() {
           transition={{ type: "spring", stiffness: 350, damping: 30, delay: 0.1 }}
           className="text-gray-400 text-lg max-w-2xl transform-gpu"
         >
-          Using machine learning to solve complex forecasting and classification problems.
+          Developed ML models and systems to solve complex forecasting and classification problems.
         </motion.p>
       </div>
 

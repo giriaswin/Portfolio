@@ -244,7 +244,7 @@ export default function Home() {
                 <h2 className="text-[1.6rem] font-heading font-normal text-center text-white leading-tight tracking-[0.5px] uppercase mt-0">
                   GIRI ASWIN
                 </h2>
-                <p className="text-center font-body text-primary text-[0.7rem] tracking-[2px] font-medium mt-1 uppercase">Aspiring Data Scientist</p>
+                <p className="text-center font-body text-primary text-[0.7rem] tracking-[2px] font-medium mt-1 uppercase">Aspiring Data Engineer</p>
               </div>
 
               {/* Card - Bottom Section (Accent Color - Matching Theme) */}
