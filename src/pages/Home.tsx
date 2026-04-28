@@ -175,8 +175,8 @@ export default function Home() {
           >
             {/* Lanyard Strap */}
             <div className="flex h-40 lg:h-[400px] w-10 bg-[#161616] absolute -top-[150px] lg:-top-[380px] rounded-sm -z-10 bg-gradient-to-b from-[#0a0a0a] to-[#1a1a1a] shadow-[inset_0_0_15px_rgba(0,0,0,0.8)] border-x border-white/5 flex-col items-center justify-end pb-8 overflow-hidden pointer-events-none">
-                <div className="text-white/20 font-body font-bold tracking-[2px] text-[12px] rotate-180 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>DATA SCIENTIST  •  FULL-STACK</div>
-                <div className="text-white/20 font-body font-bold tracking-[2px] text-[12px] rotate-180 mt-12 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>DATA SCIENTIST  •  FULL-STACK</div>
+                <div className="text-white/20 font-body font-bold tracking-[2px] text-[12px] rotate-180 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>DATA SYSTEMS  •  FULL-STACK</div>
+                <div className="text-white/20 font-body font-bold tracking-[2px] text-[12px] rotate-180 mt-12 whitespace-nowrap" style={{ writingMode: 'vertical-rl' }}>DATA SYSTEMS  •  FULL-STACK</div>
             </div>
               
             {/* Lanyard Clip / Attachment */}
